@@ -14,7 +14,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173', 
-    'https://are-we-meeting.vercel.app' // Make sure this matches your Vercel domain exactly
+    'https://are-we-meeting.vercel.app' 
   ],
   credentials: true,
 }));
