@@ -12,7 +12,7 @@ require('./services/reminderCron');
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: ['http://localhost:5173', 'http://localhost:3000',process.env.FRONTEND_URL],
   credentials: true,
 }));
 
@@ -29,7 +29,7 @@ pool.query('SELECT NOW()')
   .then(() => console.log('DB connected'))
   .catch((err) => console.log('DB error', err));
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT||8000;
 app.listen(PORT, () => {
   console.log(`Server is running perfectly on port ${PORT}`);
 });
