@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f4f1ea;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.12), transparent 24%),
+    linear-gradient(180deg, #0f1720 0%, #071018 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html,body{
+  overflow-x: hidden;
+  height: auto;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(245, 158, 11, 0.12), transparent 24%),
+    linear-gradient(180deg, #0f1720 0%, #071018 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #fffdf8;
+}
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: visible;
+  color: #ffffff;
+}
+
+.app-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.7;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.16), transparent 18%),
+    radial-gradient(circle at 84% 12%, rgba(251, 191, 36, 0.14), transparent 16%),
+    radial-gradient(circle at 70% 72%, rgba(14, 165, 233, 0.08), transparent 20%);
+}
+
+.app-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 88%);
+}
+
+.container-shell {
+  position: relative;
+  width: 100%;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.glass-panel,
+.glass-card,
+.stat-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 24px 60px rgba(1, 7, 12, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+.marginten{
+  margin-bottom: 10px;
+}
+.glass-panel {
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.06);
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.meetingdemo{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.glass-card {
+  border-radius: 24px;
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.stat-card {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.25rem;
+}
+
+.page-title,
+.section-title,
+.metric-number {
+  font-family: "Space Grotesk", sans-serif;
+  color: #fafaf9;
+}
+
+.page-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  background: rgba(103, 232, 249, 0.1);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #cffafe;
+}
+
+.hero-kicker {
+  max-width: 38rem;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  line-height: 1.8;
+  color: #cbd5e1;
+}
+
+.primary-button,
+.secondary-button,
+.ghost-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+
+.primary-button {
+  background: #22d3ee;
+  color: #082f49;
+  padding: 0.82rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  background: #67e8f9;
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+  padding: 0.82rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.secondary-button:hover,
+.ghost-button:hover {
+  transform: translateY(-2px);
+}
+
+.secondary-button:hover {
+  border-color: rgba(103, 232, 249, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ghost-button {
+  padding: 0.65rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.ghost-button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+}
+
+.primary-button:disabled,
+.secondary-button:disabled,
+.ghost-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+.surface-input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(2, 6, 23, 0.7);
+  padding: 0.9rem 1rem;
+  color: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.surface-input::placeholder {
+  color: #64748b;
+}
+
+.surface-input:focus {
+  border-color: rgba(103, 232, 249, 0.5);
+  box-shadow: 0 0 0 4px rgba(103, 232, 249, 0.14);
+}
+
+.surface-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.metric-number {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page-frame {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.page-stack {
+  display: flex;
+  flex-direction: column;
+  /* Increase this from 1.5rem to 4rem or 6rem */
+  gap: 5rem; 
+}
+
+.subtle-link {
+  color: #cbd5e1;
+  transition: color 0.2s ease;
+}
+
+.subtle-link:hover {
+  color: #f8fafc;
+}
+
+@media (min-width: 640px) {
+  .container-shell {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-shell {
+    padding: 0 2rem;
+  }
+}
