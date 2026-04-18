@@ -12,7 +12,10 @@ require('./services/reminderCron');
 const app = express();
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000',process.env.FRONTEND_URL],
+  origin: [
+    'http://localhost:5173', 
+    'https://are-we-meeting.vercel.app' // Make sure this matches your Vercel domain exactly
+  ],
   credentials: true,
 }));
 
