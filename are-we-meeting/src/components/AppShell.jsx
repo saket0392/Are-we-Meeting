@@ -76,7 +76,7 @@ export default function AppShell({ children }) {
                 ) : (
                   <div className="flex items-center gap-3">
                     <Link to="/demo" className="primary-button px-4 py-2 rounded-2xl border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 transition text-sm font-bold" style={{marginRight:'10px'}}>Try Demo</Link>
-                    <Link to="/auth?mode=login" className="primary-button text-sm" style={{marginRight:'10px'}}>Login</Link>
+                    <Link to="/auth?mode=login" className="secondary-button text-sm" style={{marginRight:'10px'}}>Login</Link>
                     <Link to="/auth?mode=register" className="primary-button text-sm" style={{marginRight:'10px'}}>Sign Up</Link>
                   </div>
                 )}
