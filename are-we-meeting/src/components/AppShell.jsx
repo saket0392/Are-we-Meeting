@@ -90,7 +90,7 @@ export default function AppShell({ children }) {
                   onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className="primary-button flex items-center gap-1 p-2 text-slate-300 hover:text-white transition focus:outline-none"
                 >
-                  Menu
+                  Demo/Login
                 </button>
               </div>
 
