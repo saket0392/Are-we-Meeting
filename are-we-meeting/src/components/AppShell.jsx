@@ -76,7 +76,7 @@ export default function AppShell({ children }) {
                 ) : (
                   <div className="flex items-center gap-3">
                     <Link to="/demo" className="primary-button px-4 py-2 rounded-2xl border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 transition text-sm font-bold" style={{marginRight:'10px'}}>Try Demo</Link>
-                    <Link to="/auth?mode=login" className="ghost-button text-sm" style={{marginRight:'10px'}}>Login</Link>
+                    <Link to="/auth?mode=login" className="primary-button text-sm" style={{marginRight:'10px'}}>Login</Link>
                     <Link to="/auth?mode=register" className="primary-button text-sm" style={{marginRight:'10px'}}>Sign Up</Link>
                   </div>
                 )}
@@ -101,15 +101,15 @@ export default function AppShell({ children }) {
               <div className="absolute top-[calc(100%+12px)] left-0 right-0 glass-panel p-6 flex flex-col gap-2 animate-in fade-in slide-in-from-top-2 duration-200 shadow-2xl">
                 {hasToken ? (
                   <>
-                    <Link to="/" className="secondary-button w-full text-center text-slate-300 hover:text-cyan-400 py-3 mb-2" style={{marginBottom:'10px'}}>Home</Link>
-                    <Link to="/create" className="secondary-button w-full text-center text-slate-300 hover:text-cyan-400 py-3 mb-2" style={{marginBottom:'10px'}}>Create</Link>
-                    <Link to="/availability" className="secondary-button w-full text-center text-slate-300 hover:text-cyan-400 py-3 mb-2" style={{marginBottom:'10px'}}>Availability</Link>
+                    <Link to="/" className="primary-button  w-full text-center text-slate-300 hover:text-cyan-400 py-3 mb-2" style={{marginBottom:'10px'}}>Home</Link>
+                    <Link to="/create" className="primary-button  w-full text-center text-slate-300 hover:text-cyan-400 py-3 mb-2" style={{marginBottom:'10px'}}>Create</Link>
+                    <Link to="/availability" className="primary-button w-full text-center text-slate-300 hover:text-cyan-400 py-3 mb-2" style={{marginBottom:'10px'}}>Availability</Link>
                     <button onClick={handleLogout} className="primary-button w-full text-center text-red-400 py-3 font-bold" style={{marginBottom:'10px'}}>Logout</button>
                   </>
                 ) : (
                   <>
                     <Link to="/demo" className="primary-button w-full text-center text-cyan-400 font-bold py-3 mb-2" style={{marginBottom:'10px'}}>Try Demo</Link>
-                    <Link to="/auth?mode=login" className="secondary-button w-full text-center text-slate-300 py-3 mb-2"  style={{marginBottom:'10px'}}>Login</Link>
+                    <Link to="/auth?mode=login" className="primary-button  w-full text-center text-slate-300 py-3 mb-2"  style={{marginBottom:'10px'}}>Login</Link>
                     <Link to="/auth?mode=register" className="primary-button w-full text-center text-slate-300 py-3 font-bold"  style={{marginBottom:'10px'}}>Sign Up</Link>
                   </>
                 )}
